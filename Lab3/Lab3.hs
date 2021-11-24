@@ -14,7 +14,7 @@ split n (x:xs) = (x:fst(split(n-1) xs),snd(split(n-1) xs))
 -- Результат роботи:
 -- Для тестування потрібно ввести так команди:
 -- ghci
--- :load Lab2\\Lab2.hs
+-- :load Lab3\\Lab3.hs
 -- split 6 "qwertyuio"
 -- ("qwertyu","io")
 
