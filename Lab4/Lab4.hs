@@ -20,11 +20,11 @@ about = [Info "Andrey" "+380503842944" "03.02.2002",
          Info "Sonya" "+380504839033" "16.06.1994",
          Info "Andrey" "+380501820432" "01.08.2010"]
 
-checkWorb worb xs  = if worb == head xs then True else False
+checkLetter letter xs  = if letter == head xs then True else False
 checkName _ []=[]
-checkName worb (x : xs) = if checkWorb worb (nameOfInfo x) then (nameOfInfo x, numberOfInfo x, dataOfInfo x):checkName worb xs else checkName worb xs
+checkName letter (x : xs) = if checkLetter letter (nameOfInfo x) then (nameOfInfo x, numberOfInfo x, dataOfInfo x):checkName letter xs else checkName letter xs
 
-findName worb = [checkName worb about]
+findName letter = [checkName letter about]
 
 -- Результат роботи:
 -- Для тестування потрібно ввести так команди:
